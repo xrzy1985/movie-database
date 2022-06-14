@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Http from './rest/Http.jsx';
 import Main from './main/Main.jsx';
 import './App.css';
 
 const App = () => {
+  const [movies, setMovies] = useState([]);
   const style = { header: {height: "20vh"}, h3: {"padding": "5vh 0", "textAlign": "center"}, a: { margin: "0 0 0 2vw" } };
   const cont = { 'width': '100vw', 'height': '100vh' };
 
@@ -25,7 +26,7 @@ const App = () => {
           </div>
         </div>
         <Main></Main>
-        {/* <Footer></Footer> */}
+        {/* <Footer></Footer> **COMING SOON** */}
       </div>
     </React.Fragment>
   );
