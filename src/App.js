@@ -7,8 +7,6 @@ import Main from './main/Main.jsx';
 import './App.css';
 
 const App = () => {
-  const [movies, setMovies] = useState([]);
-  const containers = {header: {"height": "20vh"}, footer: {"height": "10vh"}};
 
   useEffect(() => {
     Http('Spiderman');
@@ -17,13 +15,13 @@ const App = () => {
   return (
     <React.Fragment>
     <div className="parent">
-        <div style={containers.header} id="shared">
+        <div style={{"height": "20vh"}} id="shared">
           <Header/>
         </div>
         <div className="main-section">
           <Main/>
         </div>
-        <div style={containers.footer} id="shared">
+        <div style={{"height": "10vh"}} id="shared">
           <Footer/>
         </div>
       </div>
