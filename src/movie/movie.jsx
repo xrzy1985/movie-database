@@ -10,7 +10,7 @@ export const Movie = (props) => {
         <Spacer/>
         <div className="card.main text-white bg-secondary" id="img">
           <div className="card-body">
-              <h5 className="card-title" id="title">{Title} ({Year})</h5>
+              <h5 className="card-title" id="title">{Title} {Year}</h5>
           </div>
           <img className="card-img-top" src={Poster === 'N/A' ? NotFound : Poster} alt={Title}></img>
           <div className="card-body">
