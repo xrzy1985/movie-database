@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import useHTTP from './rest/Http.jsx';
 import Footer from './components/footer/footer.jsx';
 import Header from './components/header/header.jsx';
@@ -19,15 +19,19 @@ const App = () => {
         </div>
         <div className="main-section">
           {!isLoading ?
-            <><Main/></> :
-            <><div className="progress">
-              <div className="progress-bar progress-bar-striped progress-bar-animated"
-                    role="progressbar"
-                    aria-valuenow={count}
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                    style={{"width": "100%"}}></div>
-            </div></>
+            <>
+              <Main/>
+            </> :
+            <>
+              <div className="progress">
+                <div className="progress-bar progress-bar-striped progress-bar-animated"
+                      role="progressbar"
+                      aria-valuenow={count}
+                      aria-valuemin={0}
+                      aria-valuemax={100}
+                      style={{"width": "100%"}}></div>
+              </div>
+            </>
           }
         </div>
         <div className="footer-section" id="shared">
