@@ -1,4 +1,5 @@
 import React from 'react';
+import { IMG } from '../images/img';
 import { Spacer } from '../spacer/spacer';
 import './movie.css';
 
@@ -9,9 +10,9 @@ export const Movie = (props) => {
       <div className="main">
         <Spacer/>
         <div className="card.main text-white bg-secondary" id="img">
-          <MovieCard details={[Title, Year]}/>
-          <img className="card-img-top" src={Poster === 'N/A' ? NotFound : Poster} alt={Title}></img>
-          <MovieCard details={Type} />
+          <MovieDetails details={[Title, Year]}/>
+          <IMG source={Poster === 'N/A' ? NotFound : Poster} alt={Title}/>
+          <MovieDetails details={Type} />
         </div>
         <Spacer/>
       </div>
@@ -19,22 +20,40 @@ export const Movie = (props) => {
   );
 }
 
-function MovieCard(props) {
+/**
+ * @function MovieDetails
+ * @description to build out a bootstrap movie card title
+ * @returns {React Fragment}
+ */
+function MovieDetails(props) {
   return (
-    <div className="card-body">
-      <h5 className="card-title" id="title">{Details(props)}</h5>
-    </div>
+    <React.Fragment>
+      <div className="card-body">
+        <h5 className="card-title" id="title">{Details(props.details)}</h5>
+      </div>
+    </React.Fragment>
   );
 }
 
-function Details(props) {
-  return typeof props.details !== "string" ? serializeTitle(props.details) : props.details;
+/**
+ * @function Details
+ * @description determine if the details need serialized
+ * @returns {string}
+ */
+function Details(details) {
+  return typeof details !== "string" ? serializeTitle(details) : details;
 }
 
-function serializeTitle(props) {
+/**
+ * @function serializeTitle
+ * @param {array} details Relevant information pertaining to the movie being serialized
+ * @description concatenate values into readable text
+ * @returns {string}
+ */
+function serializeTitle(details) {
   let _title = '';
-  for (let i = 0, iLen = props.length; i < iLen; i++) {
-    _title += i === iLen - 1 ? props[i] : props[i] + ' ';
+  for (let i = 0, iLen = details.length; i < iLen; i++) {
+    _title += i === iLen - 1 ? details[i] : details[i] + ' ';
   }
   return _title;
 }
