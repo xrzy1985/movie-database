@@ -11,9 +11,13 @@ Mobile App designed to be able to search a json file that is built from serializ
 For personal use within my local network
 
 ### `Project Plans`
-Plan to incorporate a database to store the serialized data  
-Create a back end service to serve the file via api or sdk  
+Create DB to store data in once serialized  
+Serve data via API or SDK  
+    If API, spring boot  
+    If SDK, TBD  
 Remove all data manipulation out of the FE, and into a middle layer  
+Adhere to a MVC pattern; pull logic out React Component file, and into a service file  
+Test containerization with Docker and Kubernetes  
 
 ### `Todo`
 #### `MDB-002`: update the test for the http component
