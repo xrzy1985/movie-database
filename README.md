@@ -11,6 +11,7 @@ Mobile App designed to be able to search a json file that is built from serializ
 For personal use within my local network
 
 ### `Project Plans`
+Webpack
 Create DB to store data in once serialized  
 Serve data via API or SDK  
     If API, spring boot  
