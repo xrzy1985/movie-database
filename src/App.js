@@ -5,7 +5,6 @@ import Main from './components/main/Main.jsx';
 import './App.css';
 
 const App = () => {
-
   return (
     <React.Fragment>
       <div className="parent">

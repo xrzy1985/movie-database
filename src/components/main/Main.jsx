@@ -1,4 +1,5 @@
 import React from 'react';
+import Http from '../../rest/Http';
 import Movies from '../movies/movies';
 import MOVIE_LIST from '../../static/movies.json';
 import './main.css';
@@ -7,7 +8,6 @@ const MOVIE = { "Poster": "N/A", "Type": "movie", "imdbID": "" };
 const movies = [];
 
 export default function Main() {
-
     for (let i = 0, iLen = MOVIE_LIST.length; i < iLen; i++) {
         const title = MOVIE_LIST[i].slice(0, -5).replace('\"', '');
         const year = title.includes('(') && title.includes(')') ? title.slice(title.indexOf('(')) : '';
@@ -16,6 +16,7 @@ export default function Main() {
 
     return (
         <React.Fragment>
+            <Http request={{url: '', method: 'GET'}} />
             <Movies movies={movies}/>
         </React.Fragment>
     );

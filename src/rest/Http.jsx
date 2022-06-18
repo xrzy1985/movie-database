@@ -1,16 +1,21 @@
 import Key from '../private/key';
 
-export default function Http(value, method, url, headers, body) {
-    const API_URL = buildKey();
-    const SEARCH_PARAM = value || '';
+function buildKey() { return 'https://omdbapi.com?apikey=' + Key(); }
 
+export default function Http(props) {
+    if (!props.request.url || !props.request.method) {
+        return;
+    }
     const query = async () => {
-        const request = await fetch(`${API_URL}&s=${SEARCH_PARAM}`);
-        const response = await request.json();
+        const response = await fetch({
+            url: props.request.url,
+            method: props.request.method,
+            headers: { ...props.request.headers, "Content-Type": "application/json" },
+            body: JSON.stringify(props.request.body || {})
+        })
+        .catch(e => { return; })
+        .json();
         console.log(response);
     }
-
     query();
 }
-
-function buildKey() { return 'https://omdbapi.com?apikey=' + Key(); }
