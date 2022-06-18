@@ -1,8 +1,8 @@
 import { render } from '@testing-library/react';
 import App from './App';
-import Header from './header/header.jsx';
-import Footer from './footer/footer.jsx';
-import Main from './main/Main.jsx';
+import Header from './components/header/header.jsx';
+import Footer from './components/footer/footer.jsx';
+import Main from './components/main/Main.jsx';
 
 let style = null;
 let headerStyle;

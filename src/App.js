@@ -1,7 +1,7 @@
 import React from 'react';
-import Footer from './footer/footer.jsx';
-import Header from './header/header.jsx';
-import Main from './main/Main.jsx';
+import Footer from './components/footer/footer.jsx';
+import Header from './components/header/header.jsx';
+import Main from './components/main/Main.jsx';
 import './App.css';
 
 const App = () => {
@@ -9,13 +9,13 @@ const App = () => {
   return (
     <React.Fragment>
       <div className="parent">
-        <div style={{"height": "20vh"}} id="shared">
+        <div className="header-section" id="shared">
           <Header/>
         </div>
         <div className="main-section">
           <Main/>
         </div>
-        <div style={{"height": "10vh"}} id="shared">
+        <div className="footer-section" id="shared">
           <Footer/>
         </div>
       </div>

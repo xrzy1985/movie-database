@@ -1,6 +1,6 @@
 import React from 'react';
 import Movies from '../movies/movies';
-import MOVIE_LIST from '../static/movies.json';
+import MOVIE_LIST from '../../static/movies.json';
 import './main.css';
 
 const MOVIE = { "Poster": "N/A", "Type": "movie", "imdbID": "" };

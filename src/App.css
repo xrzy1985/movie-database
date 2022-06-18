@@ -18,14 +18,13 @@
   }
 }
 
-#shared {
-  width: 100%;
-  background-color: #343A40;
-}
-
 .parent {
   width: 100%;
   height: 100%;
+}
+
+.header-section {
+  height: 20vh;
 }
 
 .main-section {
@@ -35,3 +34,13 @@
   height: 70vh;
   overflow: auto;
 }
+
+.footer-section {
+  height: 10vh;
+}
+
+#shared {
+  width: 100%;
+  background-color: #343A40;
+}
+

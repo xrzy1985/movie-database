@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
-import MOVIE_LIST from '../static/movies.json';
-import Main from './Main';
+import MOVIE_LIST from '../../static/movies.json';
+import Main from '../main/Main.jsx';
 // import Movies from '../movies/movies.jsx';
 
 let container = [];
