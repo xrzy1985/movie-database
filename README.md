@@ -9,6 +9,8 @@ Mobile App designed to be able to search a json file that is built from serializ
 
 ### `npm start`
 
+### `Note:` For personal use within my local network
+
 ### `Project Plans`
 Plan to incorporate a database to store the serialized data
 Create a back end service to serve the file via api or sdk
