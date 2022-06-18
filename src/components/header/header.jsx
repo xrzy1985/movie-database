@@ -21,7 +21,7 @@ export default function Header() {
                                 // implement button search capabilities
                             }}
                             type="button">
-                        <img src="search.svg" width="30" height="30" className="d-inline-block align-top" alt="Search"></img>
+                        <img src="assets/search.svg" width="30" height="30" className="d-inline-block align-top" alt="Search"></img>
                     </button>
                 </div>
             </div>
