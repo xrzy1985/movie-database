@@ -8,7 +8,7 @@ const styles = { position: "relative", top: "15%" };
 function Footer() {
     return ( 
         <footer className="page-footer font-small blue" style={style}>
-            <div className="footer-copyright text-center py-3" style={styles}>
+            <div className="footer-copyright text-center py-3" data-testid="footer-id" style={styles}>
                 © Copyright | 2022
             </div>
         </footer>

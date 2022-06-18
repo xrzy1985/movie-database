@@ -8,7 +8,7 @@ const App = () => {
 
   return (
     <React.Fragment>
-    <div className="parent">
+      <div className="parent">
         <div style={{"height": "20vh"}} id="shared">
           <Header/>
         </div>

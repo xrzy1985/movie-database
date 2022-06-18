@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './header.css';
 
-function Header() {
+export default function Header() {
     const title = 'Local Movie Database';
     const [searchTerm, setSearchTerm] = useState("");
 
@@ -28,5 +28,3 @@ function Header() {
         </div>
      );
 }
-
-export default Header;
