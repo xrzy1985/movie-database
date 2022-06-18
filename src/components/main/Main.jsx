@@ -16,7 +16,8 @@ export default function Main() {
 
     return (
         <React.Fragment>
-            <Http request={{url: '', method: 'GET'}} />
+            <Http request={{url: 'https://jsonplaceholder.typicode.com/users', method: 'GET'}} />
+            {/* Http({{ request: { url: '', method: '' } }}); */}
             <Movies movies={movies}/>
         </React.Fragment>
     );
