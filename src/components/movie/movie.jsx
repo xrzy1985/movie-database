@@ -9,16 +9,32 @@ export const Movie = (props) => {
       <div className="main">
         <Spacer/>
         <div className="card.main text-white bg-secondary" id="img">
-          <div className="card-body">
-              <h5 className="card-title" id="title">{Title} {Year}</h5>
-          </div>
+          <MovieCard details={[Title, Year]}/>
           <img className="card-img-top" src={Poster === 'N/A' ? NotFound : Poster} alt={Title}></img>
-          <div className="card-body">
-              <h5 className="card-title" id="title">{Type}</h5>
-          </div>
+          <MovieCard details={Type} />
         </div>
         <Spacer/>
       </div>
     </>
   );
+}
+
+function MovieCard(props) {
+  return (
+    <div className="card-body">
+      <h5 className="card-title" id="title">{Details(props)}</h5>
+    </div>
+  );
+}
+
+function Details(props) {
+  return typeof props.details !== "string" ? serializeTitle(props.details) : props.details;
+}
+
+function serializeTitle(props) {
+  let _title = '';
+  for (let i = 0, iLen = props.length; i < iLen; i++) {
+    _title += i === iLen - 1 ? props[i] : props[i] + ' ';
+  }
+  return _title;
 }

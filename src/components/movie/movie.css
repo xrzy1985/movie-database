@@ -6,6 +6,10 @@
     overflow: auto;
 }
 
+.not-found {
+    text-align: center;
+}
+
 #title {
     text-align: center;
 }

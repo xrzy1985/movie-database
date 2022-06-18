@@ -1,9 +1,8 @@
 import React from 'react';
+import './movie.css';
 
 export const MovieNotFound = (props) =>{
     return (
-        <div className="empty">
-            <h3 style={{"textAlign": "center"}}>No movies found</h3>
-        </div>
+        <h3 className="not-found">No movies found</h3>
     );
 }
