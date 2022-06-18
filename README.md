@@ -11,9 +11,9 @@ Mobile App designed to be able to search a json file that is built from serializ
 For personal use within my local network
 
 ### `Project Plans`
-Plan to incorporate a database to store the serialized data
-Create a back end service to serve the file via api or sdk
-Remove all data manipulation out of the FE, and into a middle layer
+Plan to incorporate a database to store the serialized data  
+Create a back end service to serve the file via api or sdk  
+Remove all data manipulation out of the FE, and into a middle layer  
 
 ### `Todo`
 #### `MDB-002`: update the test for the http component
