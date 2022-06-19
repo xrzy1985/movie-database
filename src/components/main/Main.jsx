@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Movies from '../movies/movies';
 import MOVIE_LIST from '../../static/movies.json';
+// import { useSearchTerm } from '../../hooks/searchTerm';
 import './main.css';
 
 const MOVIE = { "Poster": "N/A", "Type": "movie", "imdbID": "" };
@@ -8,7 +9,9 @@ let _movies = [];
 
 
 export default function Main() {
-    const [movies, setMovies] = useState([]);
+    const [ movies, setMovies] = useState([]);
+    // const { searchTerm, setSearchTerm } = useSearchTerm();
+    
     useEffect(() => {
         for (let i = 0, iLen = MOVIE_LIST.length; i < iLen; i++) {
             const title = MOVIE_LIST[i].slice(0, -5).replace('\"', '');

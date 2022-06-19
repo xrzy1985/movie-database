@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useHTTP from './rest/Http.jsx';
 import Footer from './components/footer/footer.jsx';
 import Header from './components/header/header.jsx';
@@ -7,6 +7,7 @@ import './App.css';
 
 const App = () => {
   const { isLoading, resp } = useHTTP({url: 'https://jsonplaceholder.typicode.com/posts', method: 'GET'});
+  const [ term, setTerm ] = useState('');
   let count = 0;
   if (isLoading) {
     count = count + 1;
@@ -15,7 +16,7 @@ const App = () => {
     <React.Fragment>
       <div className="parent">
         <div className="header-section" id="shared">
-          <Header/>
+          <Header setTerm={setTerm} term={term}/>
         </div>
         <div className="main-section">
           {!isLoading ?

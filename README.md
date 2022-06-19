@@ -21,9 +21,10 @@ Adhere to a MVC pattern; pull logic out React Component file, and into a service
 Test containerization with Docker and Kubernetes  
 
 ### `Todo`
-#### `MDB-002`: update the test for the http component
-#### `MDB-003`: Initial implementation of search functionality
-#### `MDB-004`: Filter movies results on the UI based on search results
+#### `MDB-003`: Share state; header -> app -> movies
+#### `MDB-004`: update the test for the http component
+#### `MDB-005`: Initial implementation of search functionality
+#### `MDB-006`: Filter movies results on the UI based on search results
 
 ### `In Progress`
 #### `MDB-002`: update the test for the http component
