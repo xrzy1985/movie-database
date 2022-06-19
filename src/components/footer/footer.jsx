@@ -2,17 +2,12 @@ import React from 'react';
 
 import './footer.css';
 
-const style = { "height": "100%", "width": "100%", "backgroundColor": "#343A40", "color": "white" };
-const styles = { position: "relative", top: "15%" };
-
-function Footer() {
+export default function Footer() {
     return ( 
-        <footer className="page-footer font-small blue" style={style}>
-            <div className="footer-copyright text-center py-3" data-testid="footer-id" style={styles}>
+        <footer className="page-footer font-small bg-primary" id="footer-parent">
+            <div className="footer-copyright text-center py-3" data-testid="footer-id" id="footer-child">
                 © Copyright | 2022
             </div>
         </footer>
      );
 }
-
-export default Footer;

@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import Movies from '../movies/movies';
 import MOVIE_LIST from '../../static/movies.json';
-// import { useSearchTerm } from '../../hooks/searchTerm';
 import './main.css';
 
 const MOVIE = { "Poster": "N/A", "Type": "movie", "imdbID": "" };
 let _movies = [];
 
 
-export default function Main() {
+export default function Main(props) {
     const [ movies, setMovies] = useState([]);
-    // const { searchTerm, setSearchTerm } = useSearchTerm();
     
     useEffect(() => {
         for (let i = 0, iLen = MOVIE_LIST.length; i < iLen; i++) {
@@ -25,8 +23,12 @@ export default function Main() {
     if (movies.length) {
         return (
             <React.Fragment>
-                <Movies movies={movies}/>
+                <Movies movies={props.term !== '' ? filterMovies(props.term) : movies}/>
             </React.Fragment>
         );
+    }
+
+    function filterMovies(term) {
+        return movies.filter(m => m.Title.toLowerCase().includes(props.term) || m.Year.toLowerCase().includes(props.term));
     }
 }

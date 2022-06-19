@@ -21,7 +21,7 @@ const App = () => {
         <div className="main-section">
           {!isLoading ?
             <>
-              <Main/>
+              <Main term={term}/>
             </> :
             <>
               <div className="progress">

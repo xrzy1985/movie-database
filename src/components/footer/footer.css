@@ -1,0 +1,12 @@
+#footer-parent {
+    height: 100%;
+    width: 100%;
+    background-color: #343A40;
+    color: white;
+}
+
+#footer-child {
+    text-shadow: 2px 2px 5px black;
+    position: relative;
+    top: 15%;
+}

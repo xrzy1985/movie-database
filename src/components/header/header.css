@@ -15,4 +15,17 @@
 
 .title {
     padding: 0 0 2vh;
+    text-shadow: 2px 2px 5px black;
+}
+
+input {
+    text-align: center;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+}
+
+:-moz-placeholder {
+    text-align: center;
 }
