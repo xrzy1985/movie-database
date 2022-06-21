@@ -51,6 +51,9 @@ function Details(details) {
  * @returns {string}
  */
 function serializeTitle(details) {
+  if (!details) {
+    return;
+  }
   let _title = '';
   for (let i = 0, iLen = details.length; i < iLen; i++) {
     _title += i === iLen - 1 ? details[i] : details[i] + ' ';
