@@ -1,5 +1,6 @@
 {
   "name": "movie-database",
+  "homepage": "https://xrzy1985.github.io/movie-database",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,6 +10,7 @@
     "bootstrap": "^5.1.3",
     "env-cmd": "^10.1.0",
     "firebase": "^9.8.3",
+    "gh-pages": "^4.0.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
@@ -17,6 +19,8 @@
     "yarn": "^1.22.19"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b gh-pages -d build",
     "start": "env-cmd -f .env.development react-scripts start",
     "build": "env-cmd -f .env.production react-scripts build",
     "test": "react-scripts test",
