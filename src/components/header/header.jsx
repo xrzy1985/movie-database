@@ -11,7 +11,7 @@ export default function Header(props) {
     }
 
     return (
-        <div className="container bg-primary">
+        <div className="container-fluid bg-primary">
             <div className="con">
                 <h3 className="title">{title}</h3>
                 <div className="input-group mb-3">
