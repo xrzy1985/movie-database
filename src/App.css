@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #343A40;
+  /* background-color: #343A40; */
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -41,6 +41,5 @@
 
 #shared {
   width: 100%;
-  background-color: #343A40;
 }
 

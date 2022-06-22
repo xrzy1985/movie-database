@@ -12,17 +12,16 @@ export default function Header(props) {
 
     return (
         <div className="container-fluid bg-primary">
-            <div className="con">
-                <h3 className="title">{title}</h3>
-                <div className="input-group mb-3">
-                    <input aria-label="movie search input field"
-                            className="form-control"
-                            onChange={e => handleSearchTerm((e.target.value).toLowerCase())}
-                            placeholder="Search the database of movies"
-                            type="search"
-                            value={searchTerm}>
-                    </input>
-                </div>
+            <h3 className="title" data-testid="title">{title}</h3>
+            <div className="input-group mb-3">
+                <input aria-label="movie search input field"
+                        className="form-control"
+                        data-testid="movie-search-input"
+                        onChange={e => handleSearchTerm((e.target.value).toLowerCase())}
+                        placeholder="Search the database of movies"
+                        type="search"
+                        value={searchTerm}>
+                </input>
             </div>
         </div>
     );
