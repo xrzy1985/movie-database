@@ -26,9 +26,15 @@ Test containerization with Docker and Kubernetes
 
 ### `In Progress`
 
+#### `MDB-005`: Start writing test suites
+
 ### `Complete`
 
 #### `MDB-004`: Filter movies results on the UI based on search results
 #### `MDB-003`: Share state; header -> app -> movies
 #### `MDB-002`: Initial implementation of search functionality
 #### `MDB-001`: implement http component with mock api data
+
+
+### Tests Complete
+- footer
