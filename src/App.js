@@ -13,7 +13,7 @@ const App = () => {
   return (
     <React.Fragment>
       <div className="parent">
-        <div className="header-section" id="shared">
+        <div className="header-section bg-primary" id="shared">
           <Header setTerm={setTerm} term={term}/>
         </div>
         <div className="main-section">
@@ -33,7 +33,7 @@ const App = () => {
             </React.Fragment>
           }
         </div>
-        <div className="footer-section" id="shared">
+        <div className="footer-section bg-primary" id="shared">
           <Footer/>
         </div>
       </div>

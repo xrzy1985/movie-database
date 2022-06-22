@@ -21,8 +21,9 @@ Adhere to a MVC pattern; pull logic out React Component file, and into a service
 Test containerization with Docker and Kubernetes  
 
 ### `Todo`
-#### `MDB-007`: Update the color scheme
-#### `MDB-006`: update the test for the http component
+#### `MDB-008`: Update the color scheme
+#### `MDB-007`: Integrate responsive behavior to movie cards, desktop view should show smaller cards
+#### `MDB-006`: Add some HTML5 elements; canvas to display my active location, etc
 
 ### `In Progress`
 
@@ -38,3 +39,5 @@ Test containerization with Docker and Kubernetes
 
 ### Tests Complete
 - footer
+- header
+- img
