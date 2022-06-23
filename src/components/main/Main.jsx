@@ -7,6 +7,10 @@ import './main.css';
 const MOVIE = { "Poster": "N/A", "Type": "movie", "imdbID": "" };
 let _movies = [];
 
+/**
+ * @todo PULL THE FIREBASE REQUEST OUT OF THIS COMPONENT, AND INTO A SEPARATE COMPONENT
+ * THEN SHARE THE DATA USING THE USECONTEXT HOOK OR CREATE A CUSTOM HOOK
+ */
 
 export default function Main(props) {
     const [ isLoading, setIsLoading ] = useState(false);
