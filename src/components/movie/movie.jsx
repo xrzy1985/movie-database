@@ -6,7 +6,7 @@ import './movie.css';
 export const Movie = (props) => {
   const { Title, Poster, NotFound, Type, Year } = {...props.movie};
   return (
-    <>
+    <React.Fragment>
       <div className="main">
         <Spacer/>
         <div className="card.main text-white bg-secondary" id="img">
@@ -16,7 +16,7 @@ export const Movie = (props) => {
         </div>
         <Spacer/>
       </div>
-    </>
+    </React.Fragment>
   );
 }
 
@@ -26,21 +26,24 @@ export const Movie = (props) => {
  * @returns {React Fragment}
  */
 function MovieDetails(props) {
+  let title = getDetails(props.details);
+  let leng = title.length;
+  let fontSize = leng > 24 ? {'font-size': 'small'} : leng > 18 ? {'font-size': 'medium'} : {};
   return (
     <React.Fragment>
       <div className="card-body">
-        <h5 className="card-title" id="title">{Details(props.details)}</h5>
+        <h5 className="card-title" style={fontSize} id="title">{title}</h5>
       </div>
     </React.Fragment>
   );
 }
 
 /**
- * @function Details
+ * @function getDetails
  * @description determine if the details need serialized
  * @returns {string}
  */
-function Details(details) {
+function getDetails(details) {
   return typeof details !== "string" ? serializeTitle(details) : details;
 }
 
