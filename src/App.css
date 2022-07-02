@@ -33,6 +33,11 @@
   width: 100%;
   height: 70vh;
   overflow: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .footer-section {

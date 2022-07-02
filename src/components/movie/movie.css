@@ -1,9 +1,34 @@
 .main {
     background-color: lightgray;
-    padding: 2vh 2vw;
-    /* width: 100%;
-    height: 70vh; */
     overflow: auto;
+    font-size: large;
+}
+
+@media (min-width: 200px) {
+    .main {
+        margin: 0 5vh;
+    }
+}
+
+@media (min-width: 576px) { 
+    .main {
+        width: 40vw;
+        font-size: medium;
+    }
+}
+
+@media (min-width: 768px) { 
+    .main {
+        width: 25vw;
+        font-size: large;
+    }
+}
+
+@media (min-width: 1200px) { 
+    .main {
+        width: 20vw;
+        font-size: x-large;
+    }
 }
 
 .not-found {
